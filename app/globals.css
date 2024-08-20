@@ -1,13 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=YourFontName:wght@400;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer{
-
-body{
+@layer base {
+  body {
     @apply font-primary bg-primary text-white;
+    font-family: var(--font-jetbrainsMono); /* Apply the JetBrains Mono font */
+  }
+
+
+.h1{
+    @apply text-[48px] xl:text-[88px] leading-[1.1] font-semibold;
+
+}
+.h2{
+    @apply text-[36px] xl:text-[48px] leading-[1.1] font-semibold;
+
+}
+.h3{
+    @apply text-[20px] xl:text-[24px] leading-[1.1] font-semibold;
+
 }
 
 }
