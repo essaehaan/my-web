@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import Socials from "@/components/Socials";
 import { FiDownload } from "react-icons/fi"
+import Photo from "@/components/ui/Photo";
 
 export default function Home() {
   return (
@@ -39,7 +40,7 @@ export default function Home() {
           </div>
 
         </div>
-          <div>Picture</div>
+          <Photo />
       </div>
 
 
