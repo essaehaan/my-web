@@ -6,9 +6,8 @@
 @layer base {
   body {
     @apply font-primary bg-primary text-white;
-    font-family: var(--font-jetbrainsMono); /* Apply the JetBrains Mono font */
+    font-family: var(--font-jetbrainsMono);
   }
-
 
 .h1{
     @apply text-[48px] xl:text-[88px] leading-[1.1] font-semibold;
