@@ -12,7 +12,7 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata = {
   title: "Essa Ehaan",
-  description: "A Pgit rofessional CMS Developer",
+  description: "A Professional CMS Developer",
 };
 
 export default function RootLayout({ children }) {
