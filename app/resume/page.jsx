@@ -45,7 +45,7 @@ const about ={
 
 const experience = {
   icon: 'assets/resume/badge',
-  title: "My experience",
+  title: "My Experience",
   description: "Lorem ipsum dolor sit amet consectetur adipisicing ",
   item:
    [
@@ -75,30 +75,30 @@ const eduction = {
   icon: 'assets/resume/cap.svg',
   title: "My Eduction",
   description: "Lorem ipsum dolor sit amet consectetur adipisicing ",
-  item:
+  eItem:
    [
      {
        institution: "Uswa Public School & C Nagar",
        degree: "Matricullation",
-       duration: "Jun-12 - Dec-14",
+       eDuration: "Jun-12 - Dec-14",
 
      },
      {
       institution: "VPS & C",
       degree: "Intermidiate",
-      duration: "Jun-14 - Dec-16",
+      eDuration: "Jun-14 - Dec-16",
 
     },
     {
       institution: "Iqra University",
       degree: "BS(SE)",
-      duration: "Jun-17 - May-22",
+      eDuration: "Jun-17 - May-22",
 
     },
     {
       institution: "SMIT",
       degree: "MERN Stake Developer",
-      duration: "May-24 - Present",
+      eDuration: "May-24 - Present",
 
     },
      
@@ -107,7 +107,7 @@ const eduction = {
 }
 
 const skills ={
-  title: "My skills",
+  title: "My Skills",
   description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
   skillList:[
     {
@@ -167,19 +167,115 @@ const Resume = () => {
 
           <div className="min-h-[70vh] w-full">
             <TabsContent value="experience" className="w-full">
-              experience
+              <div className="flex flex-col gap-[30px] text-center xl:text-left">
+                <h3 className="text-4xl font-bold"> {experience.title}</h3>
+                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                  {experience.description}
+                </p>
+                <ScrollArea className="h-[400px]">
+                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+
+                    {experience.item.map((item, index)=> {
+                      return(
+                      <li key={index}>
+                        <span>{item.duration}</span>
+                        <h3>{item.position}</h3>
+                        <div>
+                          <span></span>
+                          <p>{item.company}</p>
+                        </div>
+                      </li>
+                      )
+                    })
+                    }
+                  </ul>
+                </ScrollArea>
+
+              </div>
             </TabsContent>
 
             <TabsContent value="education" className="w-full">
-              Education
+            <div className="flex flex-col gap-[30px] text-center xl:text-left">
+                <h3 className="text-4xl font-bold"> {eduction.title}</h3>
+                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                  {eduction.description}
+                </p>
+                <ScrollArea className="h-[400px]">
+                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+
+                    {eduction.eItem.map((eItem, index)=> {
+                      return(
+                      <li key={index}>
+                        <span>{eItem.eDuration}</span>
+                        <h3>{eItem.degree}</h3>
+                        <div>
+                          <span></span>
+                          <p>{eItem.institution}</p>
+                        </div>
+                      </li>
+                      )
+                    })
+                    }
+                  </ul>
+                </ScrollArea>
+
+              </div>
             </TabsContent>
 
             <TabsContent value="skills" className="w-full">
-              Skills
+            <div className="flex flex-col gap-[30px] text-center xl:text-left">
+                <h3 className="text-4xl font-bold"> {skills.title}</h3>
+                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                  {skills.description}
+                </p>
+                <ScrollArea className="h-[400px]">
+                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+
+                    {skills.item.map((skillList, index)=> {
+                      return(
+                      <li key={index}>
+                        <span>{skillList.duration}</span>
+                        <h3>{skills.position}</h3>
+                        <div>
+                          <span></span>
+                          <p>{skillList.company}</p>
+                        </div>
+                      </li>
+                      )
+                    })
+                    }
+                  </ul>
+                </ScrollArea>
+
+              </div>
             </TabsContent>
 
             <TabsContent value="about" className="w-full">
-              About
+            <div className="flex flex-col gap-[30px] text-center xl:text-left">
+                <h3 className="text-4xl font-bold"> {experience.title}</h3>
+                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                  {experience.description}
+                </p>
+                <ScrollArea className="h-[400px]">
+                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+
+                    {experience.item.map((item, index)=> {
+                      return(
+                      <li key={index}>
+                        <span>{item.duration}</span>
+                        <h3>{item.position}</h3>
+                        <div>
+                          <span></span>
+                          <p>{item.company}</p>
+                        </div>
+                      </li>
+                      )
+                    })
+                    }
+                  </ul>
+                </ScrollArea>
+
+              </div>
             </TabsContent>
           </div>
         </Tabs>
